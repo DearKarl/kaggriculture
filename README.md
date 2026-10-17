@@ -72,4 +72,4 @@ The policy entry point is `agent(observation, configuration=None)`. For download
 
 ## Acknowledgments
 
-This submission incorporates public farming routes and controllers. We thank their authors and the Kaggle community; all original source credits and license notices are preserved. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for Apache-2.0 licensing and attribution.
+[Apache-2.0 License](LICENSE) · [Source Attribution](NOTICE.md)

@@ -1,6 +1,8 @@
-# Attribution and sources
+# Source Attribution
 
-This repository preserves a selected submission by We Forgot To Water and does not claim sole authorship of the full program. The archive and extracted source are unchanged, including their historical credits and licenses. The root LICENSE reproduces the Apache License 2.0 text embedded in the source.
+Source attribution for the Kaggriculture submission by **We Forgot To Water** (`our__fr-router`). The submitted source retains its original attribution and license notices. [LICENSE](LICENSE) contains the Apache License 2.0 text embedded in the source.
+
+## Contributors and Sources
 
 Credits present in the source include:
 
@@ -11,4 +13,7 @@ Credits present in the source include:
 - [Kaggle / kaggle-environments contributors](https://github.com/Kaggle/kaggle-environments) — extracted unit/decay semantics and environment contributions.
 - Team submitters Shuang Xue and DearKarl; the selected note describes family-gated buy-lead changes.
 
-This summary does not replace the complete notices in the source. Some source comments refer to a historical `NOTICE.txt` that was not included in the downloaded archive. This file is a new archive note, not a recovered original NOTICE. Upstream lineage has not been re-audited version by version.
+
+## Source Notices
+
+The complete embedded notices remain in `src/main.py` and the original submission archive. Source comments also reference a historical `NOTICE.txt` that was not included in the downloaded archive; this document summarizes the attribution available in the submitted source.
