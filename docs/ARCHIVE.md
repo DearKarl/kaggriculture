@@ -31,6 +31,12 @@ Authoritative links:
 - [DearKarl's official certificate](https://www.kaggle.com/certification/competitions/dearkarl/kaggriculture)
 - [Team submissions page](https://www.kaggle.com/competitions/kaggriculture/submissions) — requires the appropriate Kaggle account access.
 
+### Competition Context and Participation Counts
+
+The [official competition overview](https://www.kaggle.com/competitions/kaggriculture/overview) describes two-player matches lasting 30 game days (720 turns) and final evaluation through a Bradley–Terry tournament. The final leaderboard and certificate support the denominator of 10,148 teams used for this project's placement.
+
+Entrants, individual participants, and teams are different counts, and figures captured before the deadline may differ from final standings. This project uses the final team count; it makes no historical-largest or most-participants claim, since a comprehensive official comparison as of the deadline has not been established.
+
 ### Certificate
 
 The original certificate image supplied by DearKarl is preserved unchanged. It records the individual certificate holder and the team's placement and medal.

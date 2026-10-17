@@ -31,7 +31,9 @@ The certificate is issued to DearKarl; the placement and score are team results.
 
 ## The Challenge
 
-Kaggriculture is a competitive farming simulation in which agents manage workers, crops, livestock, storage, and market orders to maximize income. Production planning determines what the farm can trade; market timing determines the value of those trades. An opponent's predictable purchases create an opportunity to adjust when our own planned purchases execute.
+[Kaggriculture](https://www.kaggle.com/competitions/kaggriculture) is a Kaggle-hosted, head-to-head simulation competition in which autonomous agents manage a farm over a **30-day season comprising 720 turns**. Agents coordinate labor, crop and livestock production, storage, and orders in a shared market, aiming to finish each match with more money than their opponent.
+
+The final standings included **10,148 teams**; our submission placed **894th, earning a bronze medal and a top-8.81% finish**. Final rankings were determined through a Bradley–Terry tournament over match results. The task combines long-horizon resource allocation with opponent-dependent market decisions: production determines what can be traded, while competing demand creates opportunities to adjust execution timing.
 
 ## Strategy: Opponent-Conditioned Market Execution
 
