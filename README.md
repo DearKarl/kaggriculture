@@ -63,13 +63,9 @@ The intended edge is better execution timing against opponents whose behavior ma
 
 | Resource | Description |
 | --- | --- |
-| [Agent source](src/main.py) | The submitted policy, with its original source and credits preserved. |
+| [Agent source](src/main.py) | The submitted agent policy. |
 | [Kaggle submission](submission/submission.tar.gz) | The single selected submission archive. |
 | [Technical walkthrough](docs/METHOD.md) | Strategy details, code references, and evaluation context. |
 | [Results and archive guide](docs/ARCHIVE.md) | Score evidence, repository contents, integrity checks, and reproduction scope. |
 
 The policy entry point is `agent(observation, configuration=None)`. For download and verification instructions, see the [archive guide](docs/ARCHIVE.md#download-and-verify).
-
-## Acknowledgments
-
-[Apache-2.0 License](LICENSE) · [Source Attribution](NOTICE.md)

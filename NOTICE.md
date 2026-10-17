@@ -2,6 +2,10 @@
 
 Source attribution for the Kaggriculture submission by **We Forgot To Water** (`our__fr-router`). The submitted source retains its original attribution and license notices. [LICENSE](LICENSE) contains the Apache License 2.0 text embedded in the source.
 
+## License
+
+[Apache-2.0 License](LICENSE)
+
 ## Contributors and Sources
 
 Credits present in the source include:
