@@ -1,6 +1,8 @@
-# Method and evidence
+# Method and Evidence
 
 ## Archive scope
+
+For score screenshots, submission metadata, and file verification instructions, see the [Results and Archive Guide](ARCHIVE.md).
 
 These notes are based on the downloaded `main.py`, submission description, and final leaderboard viewed on 2026-10-17. They do not reconstruct the complete development history. The archive contains one `main.py` (10,311 lines), preserved with its original bytes, line endings, and credits.
 
