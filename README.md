@@ -6,7 +6,7 @@
 
 **894th of 10,148 teams · Top 8.81% · Final score 4419.2**
 
-Opponent-aware market timing for a competitive farming simulation.
+Opponent-conditioned market execution with state-signature detection and constrained purchase rescheduling.
 
 [Competition](https://www.kaggle.com/competitions/kaggriculture) · [Final Leaderboard](https://www.kaggle.com/competitions/kaggriculture/leaderboard?search=We+Forgot+To+Water) · [Official Certificate](https://www.kaggle.com/certification/competitions/dearkarl/kaggriculture) · [Technical Walkthrough](docs/METHOD.md)
 
@@ -33,27 +33,31 @@ The certificate is issued to DearKarl; the placement and score are team results.
 
 Kaggriculture is a competitive farming simulation in which agents manage workers, crops, livestock, storage, and market orders to maximize income. Production planning determines what the farm can trade; market timing determines the value of those trades. An opponent's predictable purchases create an opportunity to adjust when our own planned purchases execute.
 
-## Our Strategy
+## Strategy: Opponent-Conditioned Market Execution
 
-**Recognize predictable opponents, then bring forward the purchases we already intend to make.**
+**Turn observable opponent behavior into selective, actionable market predictions.**
 
-Our submission combines an established route-based farming controller with a selective opponent-aware trading layer. Rather than applying the same market adjustment in every matchup, it checks whether the opponent's visible farm state matches a known strategy family and uses that match to gate early buying.
+Our selected submission, `our__fr-router`, integrates farm-state signature detection, conditional opponent modeling, and constrained purchase rescheduling. The trading layer uses an inferred opponent plan to decide when to advance an already scheduled purchase, while the production controller coordinates farm operations.
 
-| Stage | Strategy |
-| --- | --- |
-| **Plan production** | Use inherited precomputed routes, selected by shops and game phase, with reactive farming and market controls. |
-| **Recognize the opponent** | Compare visible farm signatures with fixed references at steps **24, 48, and 72**. |
-| **Gate the prediction** | Supply an expected opponent route while matching; disable that plan when the detector does not match. |
-| **Advance overlapping purchases** | Consider buying **one step early** when our route and the predicted opponent route plan to purchase the same product. |
-| **Control exposure** | Bound quantities by planned demand, available cash, and storage; reduce later orders to avoid buying twice. |
+### Technical Approach
 
-The central design choice is **selective use of prediction**: the early-buy layer starts disabled and relies on observable farm behavior before using an opponent plan. Its intended advantage is to execute purchases before predicted competing demand affects prices.
+| Mechanism | Implementation | Design rationale |
+| --- | --- | --- |
+| **State-signature detection** | Encode visible crop, planting-day, livestock, and tile-state features; compare them against reference signatures at steps **24, 48, and 72**. | Identify matchups where a reference action schedule is a plausible opponent model. |
+| **Conditional opponent modeling** | Enable the reference plan after a signature match; clear and lock the detector if a later checkpoint contradicts that match. | Make the use of opponent predictions depend on observable evidence. |
+| **Constrained purchase rescheduling** | Advance overlapping planned purchases by **one step**, with quantities bounded by planned demand, estimated affordability, and available storage. | Seek earlier execution before predicted competing demand affects prices. |
+| **Temporal order accounting** | Track quantities scheduled for early purchase and deduct them from the corresponding later buy orders. | Coordinate current orders with future purchase commitments. |
+| **Production–execution integration** | Couple the trading layer to shop- and phase-dependent farming routes and reactive controls. | Coordinate purchase timing with the farm's production schedule. |
 
-### Contribution and Foundations
+### Submission-Level Contribution
 
-The selected submission, `our__fr-router`, focuses on **opponent-family detection and gated buy-side lead**. Its detector and connection to the purchase controller are present in the submitted source. The farming routes, production controller, and many reactive layers build on public community solutions; their original credits are retained in [NOTICE.md](NOTICE.md).
+The contribution highlighted by this submission is the integration of **opponent recognition, a prediction gate, and buy-side timing control** into the agent's decision process:
 
-The final competition result measures the complete submitted agent. The [technical walkthrough](docs/METHOD.md) explains the implementation and the available evidence for individual components.
+1. **Matchup-dependent execution.** A farm-state match enables the opponent plan; without that match, the early-buy logic does not use the plan.
+2. **Timing adjustment within planned demand.** The layer targets purchases already scheduled by our route and overlapping with the predicted opponent's demand.
+3. **Explicit resource and order accounting.** Local cash and storage bounds limit proposed early orders, while a purchase ledger adjusts subsequent orders.
+
+The intended edge is better execution timing against opponents whose behavior matches the reference family. The reported bronze-medal result belongs to the complete submitted agent; implementation details and component-level evidence are documented in the [technical walkthrough](docs/METHOD.md).
 
 ## Code and Documentation
 
@@ -68,4 +72,4 @@ The policy entry point is `agent(observation, configuration=None)`. For download
 
 ## Acknowledgments
 
-We thank the public competition authors and the Kaggle community whose routes and controllers form the foundation of this solution. The source retains its Apache-2.0 license and contributor notices. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
+This submission incorporates public farming routes and controllers. We thank their authors and the Kaggle community; all original source credits and license notices are preserved. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for Apache-2.0 licensing and attribution.
