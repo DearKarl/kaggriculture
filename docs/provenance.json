@@ -1,0 +1,46 @@
+{
+  "competition": "kaggriculture",
+  "team": "We Forgot To Water",
+  "members": [
+    "Shuang Xue",
+    "DearKarl"
+  ],
+  "final_rank": 894,
+  "total_teams": 10148,
+  "medal": "bronze",
+  "final_leaderboard_score": 4419.2,
+  "submission": {
+    "filename": "submission.tar.gz",
+    "author": "Shuang Xue",
+    "submitted_at": "2026-09-30T23:15:59Z",
+    "public_score_displayed": 1849.9,
+    "private_score_displayed": 4419.2,
+    "description": "our__fr-router: K1 + gated buy-side lead (family-detect -> buy-front-run; non-family = pure K1). local 95.8/91.7 pct vs family, 93.8 pct non-family, no regression"
+  },
+  "verified_on": "2026-10-17",
+  "selection_basis": "User-selected submission; private score matches final team leaderboard score. Not the historical maximum public score.",
+  "sources": {
+    "leaderboard": "https://www.kaggle.com/competitions/kaggriculture/leaderboard?search=We+Forgot+To+Water",
+    "submissions": "https://www.kaggle.com/competitions/kaggriculture/submissions",
+    "certificate": "https://www.kaggle.com/certification/competitions/dearkarl/kaggriculture"
+  },
+  "files": {
+    "submission/submission.tar.gz": {
+      "bytes": 655799,
+      "sha256": "ed158fe8fe4985af9ffb61f6d49d008cb4507441e986ea2550a8572a2c7870e3"
+    },
+    "src/main.py": {
+      "bytes": 1217469,
+      "sha256": "415bbeaec143082197036552fa3b00a5d810c29b34dfc6d9583c746244dc4582"
+    }
+  },
+  "validation": {
+    "archive_members": [
+      "main.py"
+    ],
+    "source_byte_identical_to_archive": true,
+    "python_syntax": "passed",
+    "game_simulation_rerun": false,
+    "historical_local_metrics_independently_verified": false
+  }
+}
