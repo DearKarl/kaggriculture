@@ -42,5 +42,15 @@
     "python_syntax": "passed",
     "game_simulation_rerun": false,
     "historical_local_metrics_independently_verified": false
+  },
+  "certificate": {
+    "holder": "DearKarl",
+    "awarded_on": "2026-10-15",
+    "rank": 894,
+    "total_teams": 10148,
+    "medal": "bronze",
+    "source": "Original certificate image supplied by the user",
+    "file": "assets/kaggle-bronze-certificate.png",
+    "sha256": "e401d8f67b7bfd3b3c03913463a5ee07a6091c1a53d5d5ddafe04ae9704e49ad"
   }
 }
