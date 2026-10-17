@@ -41,6 +41,12 @@ The final standings included **10,148 teams**; our submission placed **894th, ea
 
 Our selected submission, `our__fr-router`, integrates farm-state signature detection, conditional opponent modeling, and constrained purchase rescheduling. The trading layer uses an inferred opponent plan to decide when to advance an already scheduled purchase, while the production controller coordinates farm operations.
 
+### Decision Flow
+
+![Opponent-conditioned execution flow with a conservative no-match branch](figures/strategy-flow.png)
+
+The diagram summarizes the family-gated early-buy layer; the complete agent includes further policy layers. [Editable Mermaid source](figures/strategy-flow.mmd).
+
 ### Technical Approach
 
 | Mechanism | Implementation | Design rationale |
@@ -61,12 +67,21 @@ The contribution highlighted by this submission is the integration of **opponent
 
 The intended edge is better execution timing against opponents whose behavior matches the reference family. The reported bronze-medal result belongs to the complete submitted agent; implementation details and component-level evidence are documented in the [technical walkthrough](docs/METHOD.md).
 
+## Watch a Real Match
+
+[![Official episode 124406853 reconstructed from recorded states](assets/replay-preview.gif)](docs/REPLAY.md)
+
+**We Forgot To Water: 99,176 coins · Opponent: 98,889 coins · Win by 287 coins**
+
+A full-season preview of an official episode from our selected submission. The GIF is a schematic reconstruction sampled from recorded states, not a new simulation. [Match details and original replay](docs/REPLAY.md). This single match illustrates gameplay rather than aggregate performance.
+
 ## Code and Documentation
 
 | Resource | Description |
 | --- | --- |
 | [Agent source](src/main.py) | The submitted agent policy. |
 | [Kaggle submission](submission/submission.tar.gz) | The single selected submission archive. |
+| [Official match replay](docs/REPLAY.md) | Recorded gameplay, match metadata, and original replay data. |
 | [Technical walkthrough](docs/METHOD.md) | Strategy details, code references, and evaluation context. |
 | [Results and archive guide](docs/ARCHIVE.md) | Score evidence, repository contents, integrity checks, and reproduction scope. |
 

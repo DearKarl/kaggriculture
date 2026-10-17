@@ -1,0 +1,22 @@
+{
+  "episode_id": 124406853,
+  "submission_id": 56721178,
+  "selected_agent": "our__fr-router",
+  "our_team": "We Forgot To Water",
+  "our_seat_zero_based": 1,
+  "opponent": "Peihao Chen Caesar",
+  "seed": 2085363426,
+  "module_version": "1.32.7",
+  "recorded_states": 720,
+  "final_bank": {
+    "We Forgot To Water": 99176.0,
+    "Peihao Chen Caesar": 98889.0
+  },
+  "outcome": "win",
+  "selection": "Most recent displayed episode of the selected submission; not selected by winning margin. Adjacent history includes losses.",
+  "source_url": "https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56721178&episodeId=124406853",
+  "replay_json_sha256": "f4e5bc9778ba6df2c66ebbd9eff0a2578106d99cf0e7999c3b2efdd48a8c073d",
+  "replay_gzip_sha256": "00f302efe1b0b2541b3c88b893f0ba9ec13c519cc6666fb7347babfa8d051fdc",
+  "preview": "Schematic reconstruction from recorded farm states sampled every 12 turns; no actions simulated.",
+  "single_match_not_aggregate_evidence": true
+}

@@ -15,14 +15,16 @@
     "submitted_at": "2026-09-30T23:15:59Z",
     "public_score_displayed": 1849.9,
     "private_score_displayed": 4419.2,
-    "description": "our__fr-router: K1 + gated buy-side lead (family-detect -> buy-front-run; non-family = pure K1). local 95.8/91.7 pct vs family, 93.8 pct non-family, no regression"
+    "description": "our__fr-router: K1 + gated buy-side lead (family-detect -> buy-front-run; non-family = pure K1). local 95.8/91.7 pct vs family, 93.8 pct non-family, no regression",
+    "id": 56721178
   },
   "verified_on": "2026-10-17",
   "selection_basis": "User-selected submission; private score matches final team leaderboard score. Not the historical maximum public score.",
   "sources": {
     "leaderboard": "https://www.kaggle.com/competitions/kaggriculture/leaderboard?search=We+Forgot+To+Water",
     "submissions": "https://www.kaggle.com/competitions/kaggriculture/submissions",
-    "certificate": "https://www.kaggle.com/certification/competitions/dearkarl/kaggriculture"
+    "certificate": "https://www.kaggle.com/certification/competitions/dearkarl/kaggriculture",
+    "selected_submission_episodes": "https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56721178&episodeId=124406853"
   },
   "files": {
     "submission/submission.tar.gz": {
@@ -52,5 +54,11 @@
     "source": "Original certificate image supplied by the user",
     "file": "assets/kaggle-bronze-certificate.png",
     "sha256": "e401d8f67b7bfd3b3c03913463a5ee07a6091c1a53d5d5ddafe04ae9704e49ad"
+  },
+  "replay_showcase": {
+    "episode_id": 124406853,
+    "metadata": "assets/replays/124406853.metadata.json",
+    "documentation": "docs/REPLAY.md",
+    "preview": "assets/replay-preview.gif"
   }
 }

@@ -1,0 +1,21 @@
+# Opponent-Conditioned Execution Flow
+
+A schematic of the family-gated early-buy layer. Signatures are checked at steps 24, 48, and 72. Purchases must overlap planned demand and are bounded by estimated cash and storage. The detector starts inactive and retains its state between checkpoints; a later checkpoint mismatch after a match clears and locks it. Additional policy layers follow.
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontFamily': 'Arial', 'fontSize': '20px', 'primaryColor': '#eef4fb', 'primaryTextColor': '#132b43', 'primaryBorderColor': '#4d7196', 'lineColor': '#46617a'}, 'flowchart': {'curve': 'linear', 'padding': 12, 'rankSpacing': 25, 'nodeSpacing': 25}}}%%
+flowchart LR
+    observation["Observe<br/>farm and market"] --> gate{"Opponent<br/>family match?"}
+    gate -->|Yes| prediction["Predict<br/>opponent buys"]
+    prediction --> purchase["Buy one<br/>step early"]
+    purchase --> accounting["Adjust later<br/>buy orders"]
+    gate -->|No| baseline["Route buys<br/>No prediction"]
+    accounting --> integration["Remaining<br/>policy layers"]
+    baseline --> integration
+    classDef input fill:#e7f5ef,stroke:#43876b,color:#173d2b
+    classDef decision fill:#fff3dc,stroke:#b98c3c,color:#594015
+    classDef output fill:#eaf0f7,stroke:#4d7196,color:#132b43
+    class observation input
+    class gate decision
+    class integration output
+```

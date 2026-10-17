@@ -101,7 +101,7 @@ The certificate's SHA-256 is recorded separately in `provenance.json`; the verif
 
 The entry point is `agent(observation, configuration=None)` in [src/main.py](../src/main.py). The original [submission.tar.gz](../submission/submission.tar.gz) retains `main.py` at the archive root for environments supporting that submission format.
 
-There is no standalone match runner in this repository. The historical simulator version and evaluation harness were not recovered with the submission. A fresh clone can verify the artifact; it does not by itself recreate the original competition environment or final rating.
+There is no standalone match runner in this repository. The recovered replay identifies environment module version `1.32.7`; the historical runnable environment and evaluation harness have not been reconstructed. A fresh clone can verify the artifact and view the recorded match; it does not by itself recreate the original competition environment or final rating.
 
 ## Evaluation Evidence and Limits
 
@@ -116,3 +116,9 @@ The official final result supports the performance of the complete submitted age
 ## Attribution and Preservation
 
 The archive and extracted source have not been rewritten for presentation. Their embedded Apache-2.0 license and historical credits remain intact. The root [LICENSE](../LICENSE) reproduces the embedded license text; [NOTICE.md](../NOTICE.md) summarizes identifiable contributors and available sources, including the limits of recovered attribution material.
+
+## Replay and Strategy Visuals
+
+The repository also includes an [official match replay showcase](REPLAY.md), the complete compressed episode JSON and metadata in `assets/replays/`, a sampled schematic GIF in `assets/replay-preview.gif`, and a Pillow-based renderer in `tools/render_replay.py`. These assets preserve recorded gameplay; they do not represent a new evaluation.
+
+The [strategy flow](../figures/strategy-flow.md) is available as editable Mermaid (`.mmd`), a Markdown wrapper, and a rendered PNG in `figures/`. It illustrates the family-gated early-buy layer and its no-match branch.
